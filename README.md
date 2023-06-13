@@ -23,7 +23,7 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [x] Picocss is used to style HTML elements
+- [ ] Picocss is used to style HTML elements
 - [x] The content creator items are displayed in a creative format, like cards instead of a list
 - [x] An image of each content creator is shown on their content creator card
 
@@ -37,10 +37,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<img src='https://gifyu.com/image/SuX9y' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+👉🏿<a href="https://gifyu.com/image/SuX9y"><img src="https://s12.gifyu.com/images/SuX9y.gif" alt="SuX9y.gif" border="0" /></a>
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  👉🏿 Kapwing
+GIF created with ...  👉🏿 ScreenToGif
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
