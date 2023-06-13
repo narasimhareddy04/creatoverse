@@ -37,7 +37,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<a href="https://gifyu.com/image/SuX9y"><img src="https://s12.gifyu.com/images/SuX9y.gif" alt="SuX9y.gif" border="0" /></a>
+👉🏿https://gifyu.com/image/SuX9y
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  👉🏿 ScreenToGif
