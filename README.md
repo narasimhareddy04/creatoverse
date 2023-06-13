@@ -29,13 +29,15 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [x] List anything else that you added to improve the site's functionality!
+* [x] Tailwind CSS is used to style the web pages
+* [x] Added notifications to the app with react-hot-toast
+* [x] Used Spinner component to show the loading stage of the web page 
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
 
-👉🏿<img src='https://www.kapwing.com/videos/64880edbde6e5f0011cc4d6b' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+👉🏿<img src='https://gifyu.com/image/SuX9y' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  👉🏿 Kapwing
