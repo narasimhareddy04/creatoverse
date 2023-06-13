@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { supabase } from "../client";
-
+import { toast } from "react-hot-toast";
 const AddCreator = ({ onAddCreator }) => {
   const [name, setName] = useState("");
   const [url, setURL] = useState("");
@@ -20,6 +20,7 @@ const AddCreator = ({ onAddCreator }) => {
       }
 
       console.log("Content creator added successfully:", data);
+      toast.success("Creator added successfully!");
 
       // Reset form fields
       setName("");
@@ -32,7 +33,7 @@ const AddCreator = ({ onAddCreator }) => {
         description,
         imageURL,
       };
-      onAddCreator(newCreator);
+      onAddCreator();
     } catch (error) {
       console.error("Error adding content creator:", error);
     }

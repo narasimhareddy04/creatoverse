@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaEdit, FaInfo, FaYoutube } from "react-icons/fa";
 const ContentCreator = ({ key, creatorDetails }) => {
+  console.log(creatorDetails);
   return (
     <div className="bg-white mb-5 flex flex-col justify-center rounded-md w-96">
       <div>
@@ -24,7 +25,7 @@ const ContentCreator = ({ key, creatorDetails }) => {
           <a className="mt-2" href={creatorDetails.url} target="_blank">
             <FaYoutube />
           </a>
-          <Link to={`/editCreator/${key}`} className="mt-2">
+          <Link to={`/editCreator/${creatorDetails.id}`} className="mt-2">
             <FaEdit />
           </Link>
         </div>

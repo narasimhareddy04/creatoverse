@@ -3,11 +3,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { supabase } from "../client";
-
+import Spinner from "../components/Spinner";
+import { toast } from "react-hot-toast";
 const EditCreator = ({ onEditCreator }) => {
-  let id = null;
-  ({ id } = useParams());
-  const eid = BigInt(id);
+  const { id } = useParams();
+
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [url, setURL] = useState("");
@@ -21,7 +21,7 @@ const EditCreator = ({ onEditCreator }) => {
         const { data, error } = await supabase
           .from("creators")
           .select()
-          .eq("id", eid)
+          .eq("id", id)
           .single();
 
         if (error) {
@@ -44,7 +44,8 @@ const EditCreator = ({ onEditCreator }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  };
+  const handleUpdateCreator = async () => {
     try {
       const { error } = await supabase
         .from("creators")
@@ -54,13 +55,14 @@ const EditCreator = ({ onEditCreator }) => {
           description,
           imageURL,
         })
-        .eq("id", eid);
+        .eq("id", id);
 
       if (error) {
         throw new Error(error.message);
       }
 
       console.log("Content creator updated successfully");
+      toast.success("Creator updated");
       onEditCreator();
       // Redirect to view creator page
       navigate(`/viewCreator/${id}`);
@@ -77,7 +79,8 @@ const EditCreator = ({ onEditCreator }) => {
       }
 
       console.log("Content creator deleted successfully");
-
+      toast.error("Creator deleted");
+      onEditCreator();
       // Redirect to home page
       navigate("/");
     } catch (error) {
@@ -85,7 +88,7 @@ const EditCreator = ({ onEditCreator }) => {
     }
   };
   if (isLoading) {
-    return <div className="text-white">Loading...</div>;
+    return <Spinner />;
   }
   return (
     <div className="container mx-auto px-4 py-8 flex-col items-center text-white ">
@@ -95,7 +98,7 @@ const EditCreator = ({ onEditCreator }) => {
         </h2>
       </div>
 
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+      <div className="max-w-md mx-auto">
         <div className="mb-4">
           <label className="block mb-1 font-semibold">Name:</label>
           <input
@@ -131,12 +134,7 @@ const EditCreator = ({ onEditCreator }) => {
             onChange={(e) => setImageURL(e.target.value)}
           />
         </div>
-        {/* <button
-          className="w-full py-2 mt-4 text-white bg-blue-500 hover:bg-blue-600 rounded"
-          type="submit"
-        >
-          Update
-        </button> */}
+
         <div className="flex justify-between">
           <button
             className="px-4 py-2 mt-4 text-white bg-red-500 hover:bg-red-600 rounded"
@@ -147,12 +145,12 @@ const EditCreator = ({ onEditCreator }) => {
 
           <button
             className="px-4 py-2 mt-4 text-white bg-blue-500 hover:bg-blue-600 rounded"
-            type="submit"
+            onClick={handleUpdateCreator}
           >
             Update
           </button>
         </div>
-      </form>
+      </div>
     </div>
   );
 };

@@ -7,17 +7,13 @@ import { FaInfo, FaYoutube } from "react-icons/fa";
 const ViewCreator = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  //   const location = useLocation();
 
-  //   const thePath = location.pathname;
-  //   const lastItem = thePath.substring(thePath.lastIndexOf("/") + 1);
-  const eid = BigInt(id);
   const [loading, setLoading] = useState(false);
   const [creator, setCreator] = useState([]);
   async function fetchCreatorData() {
     setLoading(true);
     try {
-      const { data } = await supabase.from("creators").select().eq("id", eid);
+      const { data } = await supabase.from("creators").select().eq("id", id);
       setCreator(data);
     } catch (error) {
       console.log("Error occurred");
@@ -28,22 +24,9 @@ const ViewCreator = () => {
   useEffect(() => {
     fetchCreatorData();
   }, []);
-  //   const handleDeleteCreator = async () => {
-  //     try {
-  //       const { error } = await supabase.from("creators").delete().eq("id", id);
-
-  //       if (error) {
-  //         throw new Error(error.message);
-  //       }
-
-  //       console.log("Content creator deleted successfully");
-  //       //   onEditCreator();
-  //       // Redirect to home page
-  //       navigate("/");
-  //     } catch (error) {
-  //       console.error("Error deleting content creator:", error);
-  //     }
-  //   };
+  if (loading) {
+    return <Spinner />;
+  }
   return (
     <div className="text-white text-xl flex justify-center items-center">
       {creator.map((each) => (
@@ -66,10 +49,6 @@ const ViewCreator = () => {
                 <button>Edit</button>
               </div>
             </Link>
-
-            {/* <div className="p-3 w-20 text-center rounded-md bg-red-600 text-white">
-              <button onClick={handleDeleteCreator}>Delete</button>
-            </div> */}
           </div>
         </div>
       ))}

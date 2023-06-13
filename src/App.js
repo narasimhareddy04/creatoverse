@@ -32,8 +32,8 @@ function App() {
   const addCreator = () => {
     <Link to={"/addCreator"} />;
   };
-  const handleAddCreator = (newCreator) => {
-    setCreators((prevCreators) => [...prevCreators, newCreator]);
+  const handleAddCreator = () => {
+    fetchCreatorsData();
   };
 
   return (
@@ -41,7 +41,7 @@ function App() {
       <div className="h-24  bg-gradient-to-r from-purple-500 to-pink-500 mb-5  flex justify-evenly items-center">
         <Link to={"/"}>
           <button
-            className="bg-black rounded-md p-4 text-white"
+            className="bg-black rounded-md p-4 text-white hover:bg-blue-500 text-white  p-4 rounded scale-110 transition duration-300 ease-in"
             onClick={showCreators}
           >
             Show Creators
@@ -49,7 +49,7 @@ function App() {
         </Link>
         <Link to={"/addCreator"}>
           <button
-            className="bg-black rounded-md p-4 text-white"
+            className="bg-black rounded-md p-4 text-white hover:bg-blue-500 text-white  p-4 rounded scale-110 transition duration-300 ease-in"
             onClick={addCreator}
           >
             Add Creator

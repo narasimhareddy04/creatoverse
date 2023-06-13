@@ -8,12 +8,11 @@ const ShowCreators = ({ creators }) => {
       {creators.length > 0 ? (
         creators.map((eachCreator) => (
           <>
-            console.log(eachCreator.id)
             <ContentCreator key={eachCreator.id} creatorDetails={eachCreator} />
           </>
         ))
       ) : (
-        <div className="text-white">No Content creators found</div>
+        <div className="text-white text-3xl">No Content creators found</div>
       )}
     </div>
   );
