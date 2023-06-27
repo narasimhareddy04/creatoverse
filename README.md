@@ -37,7 +37,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-👉🏿https://gifyu.com/image/SQUCV
+👉🏿https://i.imgur.com/1tT8bDD.gif
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  👉🏿 ScreenToGif
