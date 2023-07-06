@@ -39,6 +39,7 @@ Here's a walkthrough of implemented required features:
 
 👉🏿https://i.imgur.com/1tT8bDD.gif
 
+
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  👉🏿 ScreenToGif
 <!-- Recommended tools:
