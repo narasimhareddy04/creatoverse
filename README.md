@@ -38,6 +38,7 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented required features:
 
 👉🏿https://i.imgur.com/1tT8bDD.gif
+![Web development Prework Compressed](https://github.com/narasimhareddy04/creatoverse/assets/63772959/dbc5925d-9ab0-4ea9-9932-b4476828d7d1)
 
 
 <!-- Replace this with whatever GIF tool you used! -->
