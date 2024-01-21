@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+
 const URL = "https://wtcmmmjclwfzfemfpebj.supabase.co";
 
 const API_KEY =
