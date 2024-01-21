@@ -1,33 +1,63 @@
-# React & Tailwind CSS Starter Pack
+# WEB103 Prework - Creatoverse
 
-This is a starter pack for creating React projects with Tailwind CSS configured. It uses React version **18.2** and Tailwind CSS version **3.2**.
+Submitted by: Mohana Narasimha Reddy Attunuru
 
-## Usage
+About this web app: Creatoverse is a web app that displays content creators. When you press the "info" button, it shows the details of that specific content creator. You can add new creators by providing their details in the "Add Creator" page. By pressing the "edit" button, you can modify the content creator's details and update them. Additionally, you have the option to delete a specific content creator.🏿 
 
-This starter pack includes a basic setup for using **Tailwind CSS with React**. To start building your own components and styles, follow these steps:
+Time spent: 24 hours
 
-1. Clone the repository to your local machine.
+## Required Features
 
-   ```sh
-   git clone https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git
-   ```
+The following **required** functionality is completed:
 
-1. Install the required packages.
+<!-- 👉🏿👉🏿👉🏿 Make sure to check off completed functionality below -->
+- [x] **A logical component structure in React is used to create the frontend of the app**
+- [x] **At least five content creators are displayed on the homepage of the app**
+- [x] **Each content creator item includes their name, a link to their channel/page, and a short description of their content**
+- [x] **API calls use the async/await design pattern via Axios or fetch()**
+- [x] **Clicking on a content creator item takes the user to their details page, which includes their name, url, and description**
+- [x] **Each content creator has their own unique URL**
+- [x] **The user can edit a content creator to change their name, url, or description**
+- [x] **The user can delete a content creator**
+- [x] **The user can add a new content creator by entering a name, url, or description and then it is displayed on the homepage**
 
-   ```sh
-   cd react-tailwind-css-starter-pack
-   npm install
-   ```
+The following **optional** features are implemented:
 
-1. Start the development server.
-   ```sh
-   npm start
-   ```
-1. Open the project in your browser at [`http://localhost:3000`](http://localhost:3000) to view your project.
-1. Create your React components and add your styles using Tailwind classes. You can also create new CSS files and import them into your components.
+- [ ] Picocss is used to style HTML elements
+- [x] The content creator items are displayed in a creative format, like cards instead of a list
+- [x] An image of each content creator is shown on their content creator card
 
-The project is set up to use `postcss-cli` to process your CSS files. You can add your own `tailwind.config.js` file to customize your Tailwind setup.
+The following **additional** features are implemented:
 
-## Contributing
+* [x] Tailwind CSS is used to style the web pages
+* [x] Added notifications to the app with react-hot-toast
+* [x] Used Spinner component to show the loading stage of the web page 
 
-Contributions are welcome! If you have any suggestions or find any issues, please feel free to open an issue or a pull request.
+## Video Walkthrough
+
+Here's a walkthrough of implemented required features:
+
+👉🏿https://i.imgur.com/1tT8bDD.gif
+![Web development Prework Compressed](https://github.com/narasimhareddy04/creatoverse/assets/63772959/dbc5925d-9ab0-4ea9-9932-b4476828d7d1)
+
+
+<!-- Replace this with whatever GIF tool you used! -->
+GIF created with ...  👉🏿 ScreenToGif
+<!-- Recommended tools:
+[Kap](https://getkap.co/) for macOS
+[ScreenToGif](https://www.screentogif.com/) for Windows
+[peek](https://github.com/phw/peek) for Linux. -->
+
+## Notes
+
+I encountered some difficulties during the development process. Initially, I faced an issue where the newly added content creator was not being displayed on the home page. To resolve this, I passed the state object and added the new creator. However, I later changed this approach by calling the fetch creator method in the "Add Creator" page. Another problem arose when navigating to the "View Creator" page after editing a creator. I corrected this error by creating a new function specifically for editing instead of relying on the onSubmit functionality of the form, which I had previously used in the "Edit Creator" page.
+
+## License
+
+Copyright [👉🏿 2023] [👉🏿 Mohana Narasimha Reddy Attunuru]
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+> http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
